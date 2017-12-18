@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Registration</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"></link>
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="css/style.css" ></link>
+    </h:head>
+    <h:body>
+        <div class="container">
+
+            <h:form id="register" class="form-signin">
+                <h2 class="form-signin-heading">Register as Manager</h2>
+                <h:messages style="color: red;"/>
+                    
+                    <div class="form-group">
+                    <h:outputLabel value="Firstname"/>
+                    <h:inputText id="firstname"  value="#{userBean.firstname}" required="true" requiredMessage="Please enter your Firstname" p:placeholder="Your Firstname" styleClass="form-control" />
+                </div>
+
+                    <div class="form-group">
+                    <h:outputLabel value="Lasstname"/>
+                    <h:inputText id="lastname"  value="#{userBean.lastname}" required="true" requiredMessage="Please enter your Lastname" p:placeholder="Your Lastname" styleClass="form-control" />
+                </div>
+                
+                    <div class="form-group">
+                    <h:outputLabel value="Address"/>
+                    <h:inputText id="address"  value="#{userBean.address}" required="true" requiredMessage="Please enter your Address" p:placeholder="Your Address" styleClass="form-control" />
+                </div>
+                
+                    <div class="form-group">
+                    <h:outputLabel value="Phonenumber"/>
+                    <h:inputText id="phonenumber"  value="#{userBean.phonenumber}" required="true" requiredMessage="Please enter your Phonenumber" p:placeholder="Your Phonenumber" styleClass="form-control" />
+                </div>
+                
+                    <div class="form-group">
+                    <h:outputLabel value="Email"/>
+                    <h:inputText id="email"  value="#{userBean.email}" required="true" requiredMessage="Please enter your Email " p:placeholder="Your Email" styleClass="form-control" />
+                </div>
+                
+                    <div class="form-group">
+                    <h:outputLabel value="Fee"/>
+                    <h:inputText id="fee"  value="#{userBean.fee}" required="true" requiredMessage="Please enter your Fee " p:placeholder="Your Service Fee" styleClass="form-control" />
+                </div>
+                                       
+                
+			        <div class="form-group">
+                    <h:outputLabel value="Username"/>
+                    <h:inputText id="username"  value="#{userBean.username}" required="true" requiredMessage="Please enter Username" p:placeholder="Your Username" styleClass="form-control" />
+                </div>
+                                                         
+                    <div class="form-group">
+                    <h:outputLabel value="Password"/>
+                    <h:inputSecret id="password" value="#{userBean.password}" required="true" requiredMessage="Please enter Password" p:placeholder="Your Password" styleClass="form-control" />
+                </div>
+
+                <div class="form-group text-center">
+                    
+                    <h:commandButton value="Register" action="#{userBean.registerManager}" styleClass="btn btn-success btn-login-submit" /> <br/><br/>
+                </div>
+                
+            </h:form>
+			
+        </div> <!-- /container -->
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    </h:body>
+</html>

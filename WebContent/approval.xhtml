@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<title>Approve Managers Request</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"></link>
+
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="css/style.css"></link>
+</h:head>
+
+<h:body>
+	<div class="container">
+
+		<h:form id="login" class="form-signin">
+			<h2 class="form-signin-heading">Manage Request</h2>
+
+			<div class="form-group text-center">
+
+				<div class="col-sm-6">
+					<h:form id="approval">
+						<h:messages style="color: red;" />
+                            Manager Username: <h:inputText binding="#{userName}"
+							id="username" styleClass="form-control userName" value="#{sessionScope.username}"
+							 />
+						<br />
+						<h:commandButton value="Approve" action="#{userBean.appman(userName.value)}"
+							styleClass="btn btn-success btn-login-submit" />
+						<br/>
+						<br/>
+						<h:commandButton value="Decline" action="#{userBean.decman}"
+							styleClass="btn btn-success btn-login-submit" />
+					</h:form>
+				</div>
+
+
+			</div>
+
+		</h:form>
+
+	</div>
+	<!-- /container -->
+
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+		integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+		integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+		integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+		crossorigin="anonymous"></script>
+</h:body>
+</html>
